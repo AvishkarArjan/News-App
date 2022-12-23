@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title%}NYTimes{% endblock %}
+{% block content%}
+{% csrf_token %}
+        <h1>News_App : New York Times</h1>
+        <br>
+        {% for news in news_list %}
+        <h4>{{news}}</h4>
+        {% endfor %}
+        <br>
+        <a href="/" class="btn btn-dark">Go Home</a>
+{% endblock %}
+
+

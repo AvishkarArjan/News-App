@@ -5,7 +5,7 @@ import requests
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'channels/index.html')
 
 def nytimes(request):
     #css-ap8r2t e1ppw5w20
@@ -17,7 +17,7 @@ def nytimes(request):
 
         soup = BeautifulSoup(source.text, 'html.parser')
 
-        all_news = soup.find('div', class_="css-ap8r2t e1ppw5w20").find_all('h3',class_="indicate-hover")
+        all_news = soup.find('div', class_="css-mskd7l e1ppw5w20").find_all('h3',class_="indicate-hover")
 
         for news in all_news:
             text = news.text
@@ -31,7 +31,7 @@ def nytimes(request):
         'news_list':news_list
     }
 
-    return render(request, 'nytimes.html', context)
+    return render(request, 'channels/nytimes.html', context)
 
 
 def indiatoday(request):
@@ -60,4 +60,4 @@ def indiatoday(request):
         'news_list':news_list
     }
     
-    return render(request, 'indiatoday.html', context)
+    return render(request, 'channels/indiatoday.html', context)
