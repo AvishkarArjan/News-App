@@ -7,6 +7,9 @@ import requests
 def index(request):
     return render(request, 'channels/index.html')
 
+def national(request):
+    return render(request, 'channels/national.html')
+
 def nytimes(request):
     #css-ap8r2t e1ppw5w20
     news_list = []
@@ -17,7 +20,7 @@ def nytimes(request):
 
         soup = BeautifulSoup(source.text, 'html.parser')
 
-        all_news = soup.find('div', class_="css-mskd7l e1ppw5w20").find_all('h3',class_="indicate-hover")
+        all_news = soup.find('main').find_all('h3',class_="indicate-hover")
 
         for news in all_news:
             text = news.text

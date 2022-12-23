@@ -5,5 +5,6 @@ from django.urls import path
 urlpatterns = [
     path('', views.index , name= 'index'),
     path('indiatoday', views.indiatoday , name='indiatoday'),
-    path('nytimes', views.nytimes, name = 'nytimes')
+    path('nytimes', views.nytimes, name = 'nytimes'),
+    path('national', views.national, name='national')
 ]

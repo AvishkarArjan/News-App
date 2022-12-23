@@ -1,18 +1,83 @@
-{% extends 'base.html' %}
-
-{% block title%}NEWS_APP{% endblock %}
+{% extends 'base.html' %} {% block title%}NEWS_APP{% endblock %} 
 {% block content%}
 <h1>News_App : Index</h1>
-        <a href="/indiatoday" class="btn btn-dark">India Today</a>
-        <a href="/nytimes" class="btn btn-dark">New York Times</a>
 
-        <br>
-            <p>
-                - add more websites
-                - add date published
-                - add view all news
-                - add links to main articles
-                - add contact medias - yt channel , twitters, 
-                - 
-            </p>
+<br />
+<p>
+    - add date published - add view all news - add links to
+  main articles - add contact medias - yt channel , twitters, -
+</p>
+<div class="row">
+  <div class="col">
+    <h3>International news</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-3"><h5>NY Times</h5></div>
+          <div class="col">
+            <img src="/static/img/New-York-Times-logo.png" width="160">
+          </div>
+          <div class="col-4">
+            <a href="/nytimes" class="btn btn-dark">New York Times</a>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row  align-items-center">
+          <div class="col-3"><h5>BBC</h5></div>
+          <div class="col align-self-end">
+            <img src="/static/img/BBC-Logo.png" width="100">
+          </div>
+          <div class="col-4">
+            <a href="/nytimes" class="btn btn-dark">New York Times</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-4"><h5>The Washington Post</h5></div>
+          <div class="col align-self-center">
+            <img src="/static/img/Logo_The_Washington.png" width="150">
+          </div>
+          <div class="col-4">
+            <a href="/nytimes" class="btn btn-dark">New York Times</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <h3>National News</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-3"><h5>India Today</h5></div>
+          <div class="col-3">
+            <a href="/indiatoday" class="btn btn-dark">India Today</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-3"><h5>India Today</h5></div>
+          <div class="col-3">
+            <a href="/indiatoday" class="btn btn-dark">India Today</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-3"><h5>NDTV</h5></div>
+          <div class="col-3">
+            <a href="/indiatoday" class="btn btn-dark">India Today</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
 {% endblock %}
